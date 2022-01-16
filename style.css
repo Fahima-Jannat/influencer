@@ -8,6 +8,7 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
  }
+
 .headline{
     font-size: 2em;
 }
@@ -17,12 +18,21 @@
     text-align: right;
     justify-content: flex-end;
 }
+nav ul li a:hover{
+    background-color: rgb(220, 225, 240);
+    border-radius: 5px;
+}
+
 .journey-container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 2.5em;
     align-content: center;
     align-items: center;
+}
+.journey-photo img{
+    height: 414px; 
+    width: 440px;
 }
 
 .list-container {
@@ -46,10 +56,17 @@ a{
 .anchor{
     text-align: right;
 }
+span a:hover{
+    padding: 6px;
+}
 .online-shop{
     display: flex;
     justify-content: space-evenly;
         
+}
+.online-shop img:hover{
+    background-color: rgb(233, 235, 241);
+    border-radius: 3px;
 }
 .filled{
     color: #FB8200;
@@ -62,34 +79,92 @@ a{
     
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
    justify-content: space-evenly;
 }
 .product{
-    background-color: #ffffff;
+    background-color: #e9e5e5a6;
     border-radius: 5px;
-    padding: 2em;
-    margin: 1em;
+    padding: 1em;
+    margin: 15px;
+    height: 476px;
+    width: 329px;
+    box-shadow: 1em 1em 10em 10px rgb(236, 217, 217);
     
 }
-.blur{
-    color: grey;
-    padding: 0px;
+.product:hover{
+    background-color: #eed4d4a6;
+   
 }
+
 .more-products{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    text-align: right;
+    color: rgba(224, 44, 109, 0.87);
+}
+.more-products:hover{
+    color: rgba(223, 17, 93, 0.966);
+}
+
+.join-link{
+    color: white;
+    background-color: #E02C6D;
 }
 .featured-content{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
 }
-.footer-info{
-    background-color: rgb(8, 8, 61);
+
+footer{
+    background-color: #0A0826;
     color: white;
     text-align: center;
 }
+
 div span{
 align-items: center;
 }
+img{
+    border-radius: 5;
+}
+
+/*--------------------
+ media Queries 
+ ---------------------*/
+
+@media only screen and (max-width: 688px) {
+
+    .body-container{
+        width: 100%;
+    
+    }
+
+    .list-container{
+    display: none;
+    }
+    .journey-container{
+    grid-template-columns: repeat(1, 1fr);
+    }
+    .journey-photo img{
+    height: 214px; 
+    width: 240px;
+    }
+
+    .online-shop{
+    display: none;
+    /* grid-template-columns: repeat(4, 1fr); */
+    }
+
+    .product-catagory{
+    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    }
+    .featured-content{
+
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: space-evenly;
+    }
+    .featured-image{
+        height: 188px; 
+        width: 299px;
+} 
